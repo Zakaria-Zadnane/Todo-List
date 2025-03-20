@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    <h3>Todo List Practice 1</h3>
+    <div class="todo-input-grid">
+        <input type="text" class="js-name-input" onkeydown="EnterButton(event)" placeholder="Todo ....">
+        <!-- <p class="js-input-error-message"></p> -->
+        <input type="date" class="js-date-input">
+        <!-- <p class="js-input-date-error-message"></p> -->
+        <button onclick="AddToArray()" class="add-todo-button">Add</button>
+        <div class="todo-list todo-grid"></div>
+    </div>
+<script src="script/main.js"></script>
+</body>
+</html>
