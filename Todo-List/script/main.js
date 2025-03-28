@@ -77,9 +77,8 @@ const Myarray =
         function renderTodoList()
         {
             let TodoListHTML = '';
-            for (let i = 0; i < Myarray.length; i++) 
+            Myarray.forEach((elementObj, index) =>
             {
-                const elementObj = Myarray[i];
                 // const name = elementObj.name;
                 // const date = elementObj.date; //Shortcut below for to line 
                 const  { name , date} = elementObj;
@@ -87,12 +86,17 @@ const Myarray =
                 const html = `
                 <div>${name}</div>
                 <div>${date}</div>
-                <button onclick="Myarray.splice(${i},1);
+                <button onclick="Myarray.splice(${index},1);
                 renderTodoList()"
                 class = "delete-todo-button"
                 >Delete</button>
                 `;
                 TodoListHTML += html;
+
+            })
+            for (let i = 0; i < Myarray.length; i++) 
+            {
+                
                 
             }
             
